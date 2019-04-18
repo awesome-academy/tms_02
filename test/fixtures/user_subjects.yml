@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  subject: one
+  user_course: one
+  course_subject: one
+  status: 1
+  start_at: 2019-04-17 15:26:29
+
+two:
+  user: two
+  subject: two
+  user_course: two
+  course_subject: two
+  status: 1
+  start_at: 2019-04-17 15:26:29
