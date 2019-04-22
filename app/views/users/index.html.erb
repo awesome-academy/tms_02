@@ -5,7 +5,9 @@
         <th><%= t ".id" %></th>
         <th><%= t ".name" %></th>
         <th><%= t ".email" %></th>
-        <th><%= t ".action" %></th>
+        <% if current_user.supervisor? %>
+          <th><%= t ".action" %></th>
+        <% end %>
       </tr>
     </thead>
     <tbody>
