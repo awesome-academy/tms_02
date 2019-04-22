@@ -1,35 +1,37 @@
 <header class="navbar navbar-expand-lg bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" id="logo" href="#"><b>Sun-Asterisk Training</b></a>
+  <a class="navbar-brand" id="logo" href="#"><b><%= t "sun*" %></b></a>
 
- <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
 
- <!-- Navbar links -->
   <div class="navbar-collapse collapse" id="collapsibleNavbar" >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><%= t ".home" %></a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+        <% if user_signed_in? && current_user.supervisor? %>
+          <%= link_to t(".user"), admin_users_path, class: "nav-link" %>
+        <% else %>
+          <%= link_to t(".user"), users_path, class: "nav-link" %>
+        <% end %>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#"><%= t ".course" %></a>
       </li>
     </ul>
 
     <form class="form-inline">
-      <a class="btn btn-outline-primary" href="/login" role="button">
-      Login
-      </a>
-      <div style="padding-left: 10px;">
-        <a class="btn btn-outline-success" href="/signup" role="button">
-        Sign Up
-        </a>
-      </div>
+      <% if user_signed_in? %>
+        <%= link_to t(".logout"), destroy_user_session_path, method: :delete,
+          class: "btn btn-outline-primary" %>
+      <% else %>
+        <%= link_to t(".login"), new_user_session_path, class: "btn btn-outline-primary" %>
+        <div style="padding-left: 10px;">
+          <%= link_to t(".signup"), new_user_registration_path, class: "btn btn-outline-success" %>
+        </div>
+      <% end %>
     </form>
   </div>
 </header>

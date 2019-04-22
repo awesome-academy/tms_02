@@ -2,64 +2,85 @@
 @import 'bootstrap';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import 'bootstrap/glyphicons';
+
+header.navbar.navbar-expand-lg.bg-dark.navbar-dark {
+    height: 60px;
+    font-size: 15px;
+}
 
 #logo{
   padding-top: 15px;
   background: fixed;
 }
 
-header.navbar.navbar-expand-lg.bg-dark.navbar-dark {
-    height: 50px;
-    font-size: 15px;
-    padding-bottom: 20px;
+label.form-check-label.boolean.optional {
+    float: right;
+    margin: 3px;
+    padding-right: 530px;
 }
 
-/* sidebar */
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
+#log_in{
+  width: 100%;
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-.tg-btnaddtowishlist:hover,
-.tg-btnaddtowishlist:focus,
-.tg-btnaddtowishlist:hover i,
-.tg-btnaddtowishlist:hover span,
-.tg-btnaddtowishlist:focus i,
-.tg-btnaddtowishlist:focus sapn { color: #fff; }
-.tg-wrapper {overflow:hidden;}
-body.tg-comingsoonpage .tg-wrapper{overflow:visible;}
-.tg-content,
-.tg-twocolumns{
+#sign_up{
   width:100%;
-  float:left;
+}
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+//table
+table {
+    background-color: transparent;
+    max-width: 100%;
+}
+th { text-align: left; }
+table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    border-top: 1px solid #dbdbdb;
+    border: 1px solid #dbdbdb;
+    line-height: 2.5;
+    padding-left: 3px;
+    text-align: center;
+    vertical-align: top;
+}
+table thead tr th {
+    border-top: 1px solid #dbdbdb;
+    text-align: center;
+    text-transform: capitalize;
 }
