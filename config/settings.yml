@@ -1,2 +1,6 @@
 user:
   index_page: 5
+course:
+  index_page: 5
+course_subject:
+  page: 5

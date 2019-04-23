@@ -7,4 +7,6 @@ class Course < ApplicationRecord
   accepts_nested_attributes_for :course_subjects, allow_destroy: true
 
   enum status: {open: 0, start: 1, finished: 2}
+
+  scope :newest, -> {order created_at: :DESC}
 end

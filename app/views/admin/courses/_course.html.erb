@@ -1,0 +1,7 @@
+<li>
+  <div><%= link_to course.name, admin_course_path(course) %></div>
+  <div><%= course.description %></div>
+  <div>
+    <%= link_to t(".edit") , edit_admin_course_path(course) %>
+  </div>
+</li>
