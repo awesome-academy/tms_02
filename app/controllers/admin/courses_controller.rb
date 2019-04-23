@@ -1,5 +1,6 @@
 class Admin::CoursesController < ApplicationController
   before_action :load_courses, only: %i(show edit)
+  after_action :load_subjects, only: :new
 
   def index
     @courses = Course.newest.page(params[:page]).per Settings.course.index_page
@@ -43,5 +44,9 @@ class Admin::CoursesController < ApplicationController
     return @course
     flash[:danger] = t "not_found"
     redirect_to admin_root_path
+  end
+
+  def load_subjects
+    @subject = Subject.sort_by_name
   end
 end

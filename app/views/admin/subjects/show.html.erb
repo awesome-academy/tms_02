@@ -1,0 +1,8 @@
+<% provide(:title, @subject.name) %>
+<h1><%= @subject.name %></h1>
+<h2><%= @subject.description %></h2>
+<div class="container">
+  <ol id="subject">
+    <%= render partial: "show_task", collection: @tasks, as: :task %>
+  </ol>
+</div>

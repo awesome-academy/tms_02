@@ -1,0 +1,9 @@
+<% provide(:title, t(".all_subject")) %>
+<h1><%= t ".subject" %></h1>
+<div class="container">
+  <h2><%= link_to t(".create"), new_admin_subject_path, class: "btn btn-primary" %></h2>
+
+  <ul class="subjects">
+    <%= render @subjects %>
+  </ul>
+</div>

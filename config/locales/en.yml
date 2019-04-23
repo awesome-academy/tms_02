@@ -6,6 +6,8 @@ en:
   pls_login: "Please, Log in!"
   sun*: "Sun-Asterisk Training"
   error: "errors"
+  english: "English"
+  vietnamese: "Vietnamese"
   layouts:
     header:
       home: "Home"
@@ -28,6 +30,10 @@ en:
         cannot_save: "Can not create!"
         course_update: "Course updated!"
         cannot_update: "Can not update!"
+      subjects:
+        subject_created: "Subject Created!"
+        update_subject: "update subject success!"
+        subject_deleted: "subject deleted!"
   devise:
     confirmations:
       resend: "Resend confirmation instructions"
@@ -84,3 +90,19 @@ en:
         create: "Create new course"
         course: "Courses"
         the_form: "The form contains"
+    subjects:
+      form:
+        name: "Name"
+        description: "Description"
+        save: "Save"
+        task: "Tasks:"
+      task:
+        name: "Name"
+        content: "Content"
+      index:
+        all_subject: "All Subjects"
+        create: "Create new subject"
+        subject: "Subjects"
+        edit: "edit"
+      new:
+        create: "Create New Subject"
