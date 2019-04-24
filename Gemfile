@@ -6,9 +6,7 @@ ruby "2.5.1"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass"
 gem "bootstrap", "~> 4.0.0"
-gem "bootstrap3-rails", "~> 3.2"
-gem "bootstrap-cdn-rails"
-gem "bootstrap-glyphicons"
+gem "bootstrap4-kaminari-views"
 gem "config"
 gem "coffee-rails", "~> 4.2"
 gem "devise"
@@ -22,12 +20,14 @@ gem "rails", "~> 5.2.3"
 gem "rails-i18n"
 gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails", "~> 5.0"
+gem "simple_form", "~> 4.1"
 gem "uglifier", ">= 1.3.0"
 gem "yaml_db"
 gem "kaminari"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "faker"
 end
 
 group :development do

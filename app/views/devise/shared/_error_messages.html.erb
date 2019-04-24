@@ -1,0 +1,13 @@
+<% if resource.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= t"errors.messages.not_saved", count: resource.errors.count,
+        resource: resource.class.model_name.human.downcase %>
+    </h2>
+    <ul>
+      <% resource.errors.full_messages.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><li><%= message %></li></div>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
