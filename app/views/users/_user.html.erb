@@ -2,9 +2,7 @@
   <td><%= user.id %></td>
   <td><%= link_to user.name, user %></td>
   <td><%= user.email %></td>
-  <td>
-    <% if is_supervisor? user %>
-      <b><%= t ".supervisor" %></b>
-    <% end %>
-  </td>
+  <% if is_supervisor? user %>
+    <td><b><%= t ".supervisor" %></b></td>
+  <% end %>
 </tr>

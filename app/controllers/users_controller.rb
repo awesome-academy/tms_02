@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: :destroy
+  before_action :load_user, only: %i(show destroy)
 
   def index
-    @users = User.sort_by_name.page(params[:page]).per(Settings.user.index_page)
+    @users = User.sort_by_name.page(params[:page]).per Settings.user.index_page
   end
+
+  def show; end
 
   def destroy
     if @user.destroy

@@ -5,6 +5,7 @@ en:
   not_found: "Sorry! Not Found"
   pls_login: "Please, Log in!"
   sun*: "Sun-Asterisk Training"
+  error: "errors"
   layouts:
     header:
       home: "Home"
@@ -21,6 +22,12 @@ en:
     user:
       delete_user: "User deleted success"
       delete_faild: "can not delete user"
+    admin:
+      courses:
+        save_course: "Course created!"
+        cannot_save: "Can not create!"
+        course_update: "Course updated!"
+        cannot_update: "Can not update!"
   devise:
     confirmations:
       resend: "Resend confirmation instructions"
@@ -51,7 +58,9 @@ en:
       current_password: "current-password"
       cancel_my_account: "Cancel my account"
       edit:
-        Update: "Update"
+        update: "Update"
+        cancel_account: "Cancel my account"
+        unhappy: "Unhappy?"
       new:
         Sign_up: "Sign Up"
     sessions:
@@ -60,6 +69,18 @@ en:
     unlocks:
       resend_unlock: "Resend unlock instructions"
       resend_unlock_instructions: Resend unlock instructions"
-  views:
-    users:
-      supervisor: "Supervisor"
+  users:
+    supervisor: "Supervisor"
+  admin:
+    courses:
+      form:
+        name: "Name"
+        description: "Description"
+        save: "Save"
+      edit:
+        edit: "edit"
+      index:
+        all_course: "All Courses"
+        create: "Create new course"
+        course: "Courses"
+        the_form: "The form contains"

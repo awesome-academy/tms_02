@@ -1,0 +1,9 @@
+<% provide(:title, t(".all_course")) %>
+<h1><%= t ".course" %></h1>
+<div class="container">
+  <h2><%= link_to t(".create"), new_admin_course_path, class: "btn btn-primary" %></h2>
+
+  <ul class="courses">
+    <%= render @courses %>
+  </ul>
+</div>
