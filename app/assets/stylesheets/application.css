@@ -15,4 +15,5 @@
  *= require main
  *= require bootstrap.min.css
  *= require font-awesome
+ *= require bootstrap-select
  */

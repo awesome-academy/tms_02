@@ -1,0 +1,23 @@
+<% provide(:title, @course.name) %>
+<h1><%= @course.name %></h1>
+<div class="container">
+  <div class="row">
+    <div class="span6 offset3">
+      <% @course_subjects.each do |course_subject| %>
+        <div>
+          <%= link_to course_subject.subject.name, @course.start? ? edit_admin_course_course_subject_path(@course, course_subject.subject) : admin_course_course_subject_path(@course, course_subject.subject) %>
+        </div>
+      <% end %>
+
+      <%if @course.start? %>
+        <div><h3><%= t ".course_started" %></h3></div>
+      <% else %>
+        <%= form_for [:admin, @course] do |f| %>
+          <%= render "shared/error_messages", object: f.object %>
+          <div><%= t ".course_don't_start" %></div>
+          <%= f.submit t(".start"), class: "btn btn-large btn-primary" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
