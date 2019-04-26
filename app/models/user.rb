@@ -11,5 +11,4 @@ class User < ApplicationRecord
 
   enum role: {trainee: 0, supervisor: 1}
 
-  scope :sort_by_name, -> {order :name}
 end

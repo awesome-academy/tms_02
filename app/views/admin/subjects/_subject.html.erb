@@ -1,0 +1,7 @@
+<li>
+  <div><%= link_to subject.name, admin_subject_path(subject) %></div>
+  <div><%= subject.description %></div>
+  <div>
+    <%= link_to t(".edit"), edit_admin_subject_path(subject) %>
+  </div>
+</li>
