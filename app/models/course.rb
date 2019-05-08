@@ -9,4 +9,5 @@ class Course < ApplicationRecord
   enum status: {open: 0, start: 1, finished: 2}
 
   scope :newest, -> {order created_at: :DESC}
+
 end

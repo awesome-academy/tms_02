@@ -2,7 +2,13 @@
   <td><%= user.id %></td>
   <td><%= link_to user.name, user %></td>
   <td><%= user.email %></td>
-  <% if is_supervisor? user %>
-    <td><b><%= t ".supervisor" %></b></td>
+  <% if current_user.supervisor? %>
+    <% if is_supervisor? user %>
+      <td><b><%= t ".supervisor" %></b></td>
+    <% else %>
+      <td>
+        <%= link_to t(".delete"), user_path(user), class: "btn btn-danger" %>
+      </td>
+    <% end %>
   <% end %>
 </tr>

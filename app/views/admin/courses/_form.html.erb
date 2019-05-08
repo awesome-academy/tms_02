@@ -1,7 +1,17 @@
 <%= form_for [:admin, @course] do |f| %>
   <%= render "shared/error_messages", object: f.object %>
-  <%= f.text_field :name, placeholder: t(".name") %>
-  <%= f.text_area :description, placeholder: t(".description") %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_area :description, placeholder: "Description" %>
+  <div>
+    <%= f.fields_for :course_subjects do |builder| %>
+      <%= render "course_subject", f: builder %>
+    <% end %>
+  </div>
+  <div class="links">
+    <%= link_to_add_association "add subject", f, :course_subjects, partial: "course_subject",
+      class: "btn btn-success" %>
+  </div>
+
   <br>
   <%= f.submit t(".save"), class: "btn btn-large btn-primary" %>
 <% end %>
