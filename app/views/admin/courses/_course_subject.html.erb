@@ -1,0 +1,5 @@
+<div class="nested-fields">
+  <%= f.label :subjects %>
+  <%= f.select :subject_id, options_for_select(load_subjects_for_selectbox) %>
+  <%= link_to_remove_association t(".remove"), f, class: "btn btn-danger" %>
+</div>

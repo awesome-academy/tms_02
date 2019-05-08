@@ -1,0 +1,20 @@
+<% provide(:title, @course.name) %>
+<h1><%= @course.name %></h1>
+<h2><%= @course.description %></h2>
+<div class="center">
+  <div class="span6 offset3 btn-group">
+    <% @course.subjects.each do |subject| %>
+      <% link_to subject == @subject ? type_button = "btn btn-large btn-primary" : type_button = "btn btn-large btn-default" %>
+      <%= link_to subject.name, edit_admin_course_course_subject_path(@course,
+        subject), class: type_button %>
+    <% end %>
+
+    <div>
+      <h4><%= @subject.task_name %></h4>
+      <% unless @course_subject.started? %>
+        <h4><%= link_to t(".start"), admin_course_course_subject_path(@course, @subject,
+          value: :started), class: "btn btn-large btn-primary", method: :put %></h4>
+      <% end %>
+    </div>
+  </div>
+</div>

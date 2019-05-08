@@ -8,6 +8,7 @@ en:
   error: "errors"
   english: "English"
   vietnamese: "Vietnamese"
+  not_permit: "You not have permit to update this course progress!"
   layouts:
     header:
       home: "Home"
@@ -16,6 +17,7 @@ en:
       logout: "Log Out"
       login: "Login"
       signup: "Sign Up"
+      subject: "Subject"
     footer:
       all_right: ". All Rights Reserved"
       coder: "Copyright &copy;"
@@ -30,6 +32,11 @@ en:
         cannot_save: "Can not create!"
         course_update: "Course updated!"
         cannot_update: "Can not update!"
+        error: "error! can not to create"
+        create: "Course created!"
+        can't_destroy: "can not delete"
+        destroy: "Course deleted"
+        can't_edit:  "You can't edit/destroy this course"
       subjects:
         subject_created: "Subject Created!"
         update_subject: "update subject success!"
@@ -90,6 +97,12 @@ en:
         create: "Create new course"
         course: "Courses"
         the_form: "The form contains"
+      course_subject:
+        remove: remove subject"
+      show:
+        start: "Start"
+        course_started: "This course is started"
+        course_don't_start: "This course dosen't start, click start to start this course"
     subjects:
       form:
         name: "Name"
@@ -106,3 +119,9 @@ en:
         edit: "edit"
       new:
         create: "Create New Subject"
+    course_subjects:
+      show:
+        back: "Back"
+      edit:
+        start: "Start"
+

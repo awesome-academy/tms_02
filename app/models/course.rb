@@ -4,7 +4,7 @@ class Course < ApplicationRecord
   has_many :user_courses, dependent: :destroy
   has_many :subjects, through: :course_subjects
 
-  accepts_nested_attributes_for :course_subjects, allow_destroy: true
+  accepts_nested_attributes_for :course_subjects, allow_destroy: true, reject_if: :all_blank
 
   enum status: {open: 0, start: 1, finished: 2}
 

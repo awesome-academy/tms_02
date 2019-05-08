@@ -3,9 +3,13 @@ Rails.application.routes.draw do
     root "static_pages#index"
 
     devise_for :users
+
     resources :users, except: [:destroy]
+
     namespace :admin do
-      resources :courses
+      resources :courses do
+        resources :course_subjects, only: [:show, :edit, :update]
+      end
       resources :users
       resources :subjects
     end
